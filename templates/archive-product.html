@@ -1,0 +1,99 @@
+<!-- wp:group {"className":"ecom-page ecom-shop-page","layout":{"type":"default"}} -->
+<div class="wp-block-group ecom-page ecom-shop-page">
+
+    <!-- wp:template-part {"slug":"ecom-header","theme":"ecom"} /-->
+
+    <!-- wp:group {"tagName":"main","className":"ecom-shop-main","layout":{"type":"constrained"}} -->
+    <main class="wp-block-group ecom-shop-main">
+
+        <!-- wp:woocommerce/breadcrumbs /-->
+
+        <!-- wp:woocommerce/store-notices /-->
+
+        <!-- wp:group {"className":"ecom-shop-introduction","align":"wide","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignwide ecom-shop-introduction">
+
+            <!-- wp:paragraph {"className":"ecom-shop-kicker"} -->
+            <p class="ecom-shop-kicker">THE COLLECTION</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:query-title {"type":"archive","showPrefix":false,"className":"ecom-shop-title"} /-->
+
+            <!-- wp:term-description {"className":"ecom-shop-description"} /-->
+
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"ecom-shop-toolbar","align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+        <div class="wp-block-group alignwide ecom-shop-toolbar">
+
+            <!-- wp:woocommerce/product-results-count /-->
+
+            <!-- wp:woocommerce/catalog-sorting /-->
+
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"menu_order","search":"","exclude":[],"inherit":true,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":true},"tagName":"div","displayLayout":{"type":"flex","columns":3,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"queryContextIncludes":["collection"],"align":"wide","className":"ecom-shop-products"} -->
+        <div class="wp-block-woocommerce-product-collection alignwide ecom-shop-products">
+
+            <!-- wp:woocommerce/product-template -->
+
+            <!-- wp:group {"className":"ecom-product-card","layout":{"type":"default"}} -->
+            <div class="wp-block-group ecom-product-card">
+
+                <!-- wp:woocommerce/product-image {"showSaleBadge":true,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"className":"ecom-product-card__image"} -->
+                <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right"} /-->
+                <!-- /wp:woocommerce/product-image -->
+
+                <!-- wp:post-terms {"term":"product_cat","className":"ecom-product-card__category","fontSize":"label"} /-->
+
+                <!-- wp:post-title {"level":2,"isLink":true,"className":"ecom-product-card__title","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"product-title","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
+
+                <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"className":"ecom-product-card__price","fontSize":"body"} /-->
+
+                <!-- wp:woocommerce/product-button {"textAlign":"left","isDescendentOfQueryLoop":true,"className":"ecom-product-card__button","fontSize":"small"} /-->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- /wp:woocommerce/product-template -->
+
+            <!-- wp:query-pagination {"className":"ecom-shop-pagination","layout":{"type":"flex","justifyContent":"space-between"}} -->
+
+            <!-- wp:query-pagination-previous {"label":"Previous"} /-->
+
+            <!-- wp:query-pagination-numbers /-->
+
+            <!-- wp:query-pagination-next {"label":"Next"} /-->
+
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:woocommerce/product-collection-no-results -->
+
+            <!-- wp:group {"className":"ecom-shop-no-results","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group ecom-shop-no-results">
+
+                <!-- wp:heading {"level":2} -->
+                <h2 class="wp-block-heading">No products found</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph -->
+                <p>Try clearing the current filters or browse the rest of the collection.</p>
+                <!-- /wp:paragraph -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- /wp:woocommerce/product-collection-no-results -->
+
+        </div>
+        <!-- /wp:woocommerce/product-collection -->
+
+    </main>
+    <!-- /wp:group -->
+
+    <!-- wp:template-part {"slug":"ecom-footer","theme":"ecom"} /-->
+
+</div>
+<!-- /wp:group -->

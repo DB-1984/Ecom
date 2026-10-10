@@ -1,0 +1,53 @@
+.ecom-standard-page {
+    color: var(--wp--preset--color--bold-orange);
+    background: var(--wp--preset--color--gray);
+    min-height: 100vh;
+}
+
+.ecom-standard-page__main {
+    min-height: 70vh;
+}
+
+.ecom-standard-page__header {
+    border-bottom: 4px solid currentColor;
+    padding-bottom: var(--wp--preset--spacing--large);
+}
+
+.ecom-standard-page__title {
+    max-width: 14ch;
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    overflow-wrap: anywhere;
+}
+
+.ecom-standard-page__content {
+    font-size: var(--wp--preset--font-size--body);
+    line-height: 1.65;
+}
+
+.ecom-standard-page__content> :first-child {
+    margin-top: 0;
+}
+
+.ecom-standard-page__content a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+.ecom-standard-page__content img {
+    height: auto;
+    max-width: 100%;
+}
+
+.ecom-standard-page__content :is(h2, h3, h4) {
+    margin-top: 1.5em;
+}
+
+@media (max-width: 781px) {
+    .ecom-standard-page__title {
+        font-size: clamp(2.75rem, 14vw, 5rem);
+    }
+}

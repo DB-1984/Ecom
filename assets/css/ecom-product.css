@@ -1,0 +1,478 @@
+/*
+ * Single product page
+ * Shares the existing ecom header/footer and theme.json palette.
+ * :where() keeps most defaults easy to override using block/editor styles.
+ */
+
+:where(.ecom-product-page) {
+    --product-rule: currentColor;
+    color: var(--wp--preset--color--bold-orange);
+    background: var(--wp--preset--color--paper, #eee6de);
+    padding-inline: var(--wp--preset--spacing--page-gutter,
+            clamp(14px, 1.8vw, 32px));
+}
+
+.woocommerce.wc-block-breadcrumbs {
+    padding-block: 10px;
+}
+
+:where(.ecom-product-page a) {
+    color: inherit;
+    text-underline-offset: 0.2em;
+}
+
+:where(.ecom-product-page :focus-visible) {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Main content */
+
+:where(.ecom-product-main) {
+    padding-top: 24px;
+}
+
+:where(.ecom-product-main .woocommerce-breadcrumb) {
+    font-size: 12px;
+    margin-bottom: 28px;
+}
+
+/* Main product layout */
+
+:where(.ecom-product-layout) {
+    gap: clamp(24px, 4vw, 72px);
+    align-items: flex-start;
+    margin-bottom: 64px;
+}
+
+:where(.ecom-product-gallery),
+:where(.ecom-product-info) {
+    min-width: 0;
+}
+
+/* Product gallery */
+
+.woocommerce .ecom-product-gallery .wp-block-woocommerce-product-image-gallery,
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery,
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery__wrapper,
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery__image,
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery__image>a {
+    width: 100%;
+    max-width: none;
+}
+
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery {
+    float: none;
+    margin: 0;
+}
+
+.woocommerce .ecom-product-gallery .woocommerce-product-gallery__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: initial;
+}
+
+:where(.ecom-product-gallery .flex-control-thumbs) {
+    margin-top: 12px;
+}
+
+/* Product information */
+
+:where(.ecom-product-info) {
+    padding-top: 8px;
+}
+
+:where(.ecom-product-category) {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+}
+
+:where(.ecom-product-title) {
+    font-size: clamp(36px, 4.2vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+    margin-block: 0 24px;
+    overflow-wrap: anywhere;
+}
+
+:where(.ecom-product-price) {
+    font-size: clamp(22px, 2.2vw, 34px);
+    margin-bottom: 20px;
+}
+
+:where(.ecom-product-summary) {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-block: 28px;
+}
+
+/* Purchase form */
+
+:where(.ecom-product-purchase) {
+    padding-block: 28px;
+    margin-block: 28px;
+}
+
+:where(.ecom-product-purchase form.cart) {
+    margin: 0;
+}
+
+:where(.ecom-product-purchase .variations) {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+:where(.ecom-product-purchase .variations th) {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+:where(.ecom-product-purchase select) {
+    width: 100%;
+}
+
+.woocommerce div.product p.stock {
+    font-size: 1rem !important;
+}
+
+.woocommerce div.product form.cart button.single_add_to_cart_button,
+.woocommerce div.product form.cart button[name=add-to-cart] {
+    opacity: 1 !important;
+    width: 100%;
+    height: 75px;
+}
+
+.woocommerce div.product div.images img {
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    font-size: 1rem;
+}
+
+:where(.ecom-product-purchase .qty) {
+    width: 76px;
+    min-height: 48px;
+}
+
+:where(.ecom-product-purchase .single_add_to_cart_button) {
+    background: var(--wp--preset--color--bold-orange);
+    color: var(--wp--preset--color--paper, #eee6de);
+    border: 1px solid var(--wp--preset--color--bold-orange);
+    border-radius: 0;
+    padding: 14px 28px;
+    min-height: 48px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+:where(.ecom-product-purchase .single_add_to_cart_button:hover) {
+    background: var(--wp--preset--color--bold-orange) !important;
+}
+
+:where(.ecom-product-purchase .single_add_to_cart_button:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Product meta */
+
+:where(.ecom-product-info .wp-block-woocommerce-product-meta) {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Shipping and returns disclosures */
+
+:where(.ecom-product-info .wp-block-details) {
+    border-bottom: 1px solid currentColor;
+    padding-block: 18px;
+}
+
+:where(.ecom-product-info .wp-block-details summary) {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+:where(.ecom-product-info .wp-block-details p) {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 16px;
+}
+
+.ecom-product-info .wp-block-details>summary::marker {
+    content: "+  ";
+}
+
+.ecom-product-info .wp-block-details[open]>summary::marker {
+    content: "−  ";
+}
+
+/* Full-width product description/details */
+
+:where(.ecom-product-details) {
+    border-top: 4px solid var(--product-rule);
+    padding-top: 32px;
+    margin-bottom: 64px;
+}
+
+:where(.ecom-product-details p,
+    .ecom-product-details li) {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+:where(.ecom-product-details table) {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+:where(.ecom-product-details th,
+    .ecom-product-details td) {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid currentColor;
+}
+
+/* Related products */
+
+:where(.ecom-product-related) {
+    border-top: 4px solid var(--product-rule);
+    padding-top: 32px;
+}
+
+:where(.ecom-product-related .wp-block-post-title) {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+:where(.ecom-product-related .wc-block-product-template) {
+    gap: 32px 24px;
+}
+
+/* Sale badge */
+
+.woocommerce span.onsale {
+    position: absolute;
+    z-index: 9;
+    top: -0.5em;
+    left: -0.5em;
+
+    min-width: 3.236em;
+    min-height: 3.236em;
+    margin: 0;
+    padding: 0.202em;
+
+    background-color: #ff5500 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+
+    font-size: 1.057em !important;
+    font-weight: 700;
+    line-height: 3.236;
+    text-align: center;
+}
+
+/* Desktop */
+
+@media (min-width: 782px) {
+    .ecom-product-layout {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 3vw, 48px);
+        width: 100%;
+    }
+
+    .ecom-product-layout>.wp-block-column {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 781px) {
+    :where(.ecom-product-layout) {
+        gap: 28px;
+        margin-bottom: 40px;
+    }
+
+    :where(.ecom-product-title) {
+        font-size: clamp(36px, 8vw, 60px);
+    }
+
+    :where(.ecom-product-details) {
+        margin-bottom: 40px;
+    }
+}
+
+/* ==========================================================================
+   Variable product options
+   ========================================================================== */
+
+:where(.ecom-product-purchase .variations) {
+    display: block;
+    width: 100%;
+    margin: 0 0 var(--wp--preset--spacing--medium);
+    border: 0;
+}
+
+:where(.ecom-product-purchase .variations tbody) {
+    display: grid;
+    gap: var(--wp--preset--spacing--medium);
+}
+
+:where(.ecom-product-purchase .variations tr) {
+    display: grid;
+    gap: 10px;
+}
+
+:where(.ecom-product-purchase .variations th),
+:where(.ecom-product-purchase .variations td) {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+:where(.ecom-product-purchase .variations .label label) {
+    display: block;
+    color: var(--wp--preset--color--bold-orange);
+    font-size: var(--wp--preset--font-size--label, 12px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* The value cell contains both the select and Clear link. */
+:where(.ecom-product-purchase .variations .value) {
+    position: relative;
+}
+
+/* Variation dropdown. */
+:where(.ecom-product-purchase .variations select) {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    margin: 0;
+    padding: 16px 54px 16px 18px;
+
+    color: var(--wp--preset--color--bold-orange);
+    background-color: transparent;
+
+    /* CSS-only chevron. */
+    background-image:
+        linear-gradient(45deg,
+            transparent 50%,
+            currentColor 50%),
+        linear-gradient(135deg,
+            currentColor 50%,
+            transparent 50%);
+    background-position:
+        calc(100% - 24px) 50%,
+        calc(100% - 17px) 50%;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+
+    border: 2px solid var(--wp--preset--color--bold-orange);
+    border-radius: 0;
+
+    font: inherit;
+    font-size: var(--wp--preset--font-size--body, 16px);
+    font-weight: 600;
+    line-height: 1.25;
+
+    cursor: pointer;
+}
+
+/* Native dropdown options need explicit colours on some browsers. */
+:where(.ecom-product-purchase .variations select option) {
+    color: var(--wp--preset--color--bold-orange, #3d3d3d);
+    background: var(--wp--preset--color--paper, #c7c7c7);
+    font-weight: 500;
+}
+
+:where(.ecom-product-purchase .variations select:hover) {
+    background-color: rgb(255 255 255 / 8%);
+}
+
+:where(.ecom-product-purchase .variations select:focus-visible) {
+    outline: 3px solid var(--wp--preset--color--bold-orange);
+    outline-offset: 3px;
+}
+
+/* WooCommerce's Clear link. */
+:where(.ecom-product-purchase .reset_variations) {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: var(--product-);
+    font-size: var(--wp--preset--font-size--small, 14px);
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+:where(.ecom-product-purchase .reset_variations:hover) {
+    text-decoration-thickness: 2px;
+}
+
+/* Prevent WooCommerce table styles from adding unwanted separators. */
+:where(.ecom-product-purchase .variations tr),
+:where(.ecom-product-purchase .variations th),
+:where(.ecom-product-purchase .variations td) {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Closed select */
+:where(.ecom-product-purchase .variations select) {
+    color-scheme: dark;
+}
+
+/* Open dropdown options */
+:where(.ecom-product-purchase .variations select option) {
+    min-height: 48px;
+    padding: 14px 18px;
+
+    color: var(--wp--preset--color--paper, #c7c7c7);
+    background-color: var(--wp--preset--color--ink, #3d3d3d);
+
+    font: inherit;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Placeholder option */
+:where(.ecom-product-purchase .variations select option[value=""]) {
+    color: rgb(199 199 199 / 65%);
+}
+
+/* Selected option — browser support varies */
+:where(.ecom-product-purchase .variations select option:checked) {
+    color: #fff;
+    background:
+        linear-gradient(var(--wp--preset--color--bold-orange, #ff5500),
+            var(--wp--preset--color--bold-orange, #ff5500));
+}
+
+/* Disabled/unavailable variations */
+:where(.ecom-product-purchase .variations select option:disabled) {
+    color: rgb(199 199 199 / 35%);
+    background-color: var(--wp--preset--color--gray, #676767);
+}

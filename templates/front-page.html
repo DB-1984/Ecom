@@ -1,0 +1,88 @@
+<!-- wp:group {"className":"ecom-page","layout":{"type":"default"}} -->
+<div class="wp-block-group ecom-page"><!-- wp:template-part {"slug":"ecom-header","theme":"ecom"} /-->
+
+    <!-- wp:group {"tagName":"main","className":"ecom-main","layout":{"type":"default"}} -->
+    <main class="wp-block-group ecom-main">
+        <!-- wp:heading {"level":1,"className":"ecom-wordmark","style":{"elements":{"link":{"color":{"text":"#ff5500"}}},"color":{"text":"#ff5500"},"typography":{"textAlign":"center"},"spacing":{"padding":{"top":"30px","bottom":"30px"}}},"fontFamily":"blanka"} -->
+        <h1 class="wp-block-heading has-text-align-center ecom-wordmark has-text-color has-link-color has-blanka-font-family"
+            style="color:#ff5500;padding-top:30px;padding-bottom:30px">ecom<span>©</span></h1>
+        <!-- /wp:heading -->
+    </main>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"ecom-intro","style":{"spacing":{"padding":{"top":"60px","bottom":"60px"},"blockGap":"var:preset|spacing|0"}},"fontSize":"body","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+    <div class="wp-block-group ecom-intro has-body-font-size" style="padding-top:60px;padding-bottom:60px">
+        <!-- wp:group {"className":"ecom-intro-copy","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group ecom-intro-copy"><!-- wp:heading -->
+            <h2 class="wp-block-heading">Welcome to eCOM</h2>
+            <!-- /wp:heading -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"align":"wide","className":"ecom-intro-links","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignwide ecom-intro-links">
+            <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|bold-orange"}}}},"textColor":"bold-orange"} -->
+            <h3 class="wp-block-heading has-bold-orange-color has-text-color has-link-color">Where design meets passion
+            </h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|ink"}}},"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"textColor":"ink","fontSize":"product-title"} -->
+            <p class="has-ink-color has-text-color has-link-color has-product-title-font-size"
+                style="padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)">
+                We're on a mission - afforable fashion made with a passion for design.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:social-links {"iconColor":"bold-orange","iconColorValue":"#ff5500","size":"has-large-icon-size","className":"is-style-logos-only"} -->
+            <ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
+                <!-- wp:social-link {"url":"/example","service":"x"} /-->
+
+                <!-- wp:social-link {"url":"/example","service":"facebook"} /-->
+
+                <!-- wp:social-link {"url":"/example","service":"instagram"} /-->
+
+                <!-- wp:social-link {"url":"/example","service":"tiktok"} /-->
+            </ul>
+            <!-- /wp:social-links -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"ecom-products","layout":{"type":"default"}} -->
+    <div class="wp-block-group ecom-products">
+        <!-- wp:paragraph {"className":"ecom-label","style":{"elements":{"link":{"color":{"text":"var:preset|color|bold-orange"}}}},"textColor":"bold-orange"} -->
+        <p class="ecom-label has-bold-orange-color has-text-color has-link-color">LATEST ARRIVALS</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":12,"pages":1,"offset":0,"postType":"product","order":"desc","orderBy":"date","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"queryContextIncludes":["collection"]} -->
+        <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
+            <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"cropped","isDescendentOfQueryLoop":true,"aspectRatio":"3/4"} -->
+            <!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
+            <!-- /wp:woocommerce/product-image -->
+
+            <!-- wp:post-title {"level":3,"isLink":true,"fontSize":"small"} /-->
+
+            <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
+
+            <!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /-->
+            <!-- /wp:woocommerce/product-template -->
+
+            <!-- wp:spacer {"height":"50px"} -->
+            <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:dbwp/contact-form /-->
+
+            <!-- wp:woocommerce/product-collection-no-results -->
+            <!-- wp:paragraph -->
+            <p>Our next collection is on its way. Check back soon.</p>
+            <!-- /wp:paragraph -->
+            <!-- /wp:woocommerce/product-collection-no-results -->
+        </div>
+        <!-- /wp:woocommerce/product-collection -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:template-part {"slug":"ecom-footer","theme":"ecom"} /-->
+</div>
+<!-- /wp:group -->

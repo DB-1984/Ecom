@@ -1,0 +1,95 @@
+/**
+ * Theme Name: Ecom
+ * Theme URI:
+ * Author: David Brandon
+ * Author URI:
+ * Description: A block e-commerce theme for demonstration.
+ * Requires at least: 7.1
+ * Tested up to: 7.1
+ * Requires PHP: 5.7
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: ecom
+ * Tags:
+ */
+
+/* ==========================================================================
+   Icon controls
+   ========================================================================== */
+
+.single_add_to_cart_button,
+.wc-block-cart__submit-button,
+.ecom-checkout-main .wc-block-components-checkout-place-order-button,
+.external-link {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+}
+
+/* Shared mask setup */
+
+.single_add_to_cart_button::after,
+.wc-block-cart__submit-button::after,
+.ecom-checkout-main .wc-block-components-checkout-place-order-button::before,
+.external-link::after {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    flex: 0 0 auto;
+    background-color: currentColor;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+/* Add to cart */
+
+.single_add_to_cart_button::after {
+    -webkit-mask-image: url("assets/icons/shopping-cart.svg");
+    mask-image: url("assets/icons/shopping-cart.svg");
+}
+
+/* Place order */
+
+.ecom-checkout-main .wc-block-components-checkout-place-order-button::before {
+    -webkit-mask-image: url("assets/icons/secure-payment.svg");
+    mask-image: url("assets/icons/secure-payment.svg");
+}
+
+/* Proceed to checkout */
+
+.wc-block-cart__submit-button::after {
+    -webkit-mask-image: url("assets/icons/arrow-up-right.svg");
+    mask-image: url("assets/icons/arrow-up-right.svg");
+}
+
+/* Reusable external link */
+
+.external-link::after {
+    -webkit-mask-image: url("assets/icons/arrow-up-right.svg");
+    mask-image: url("assets/icons/arrow-up-right.svg");
+}
+
+/* Prevent inherited text-decoration affecting mask icons */
+
+.single_add_to_cart_button::after,
+.wc-block-cart__submit-button::after,
+.ecom-checkout-main .wc-block-components-checkout-place-order-button::before,
+.external-link::after {
+    text-decoration: none;
+}
+
+/* WooCommerce may use ::after while the Add to Cart button is loading */
+
+.single_add_to_cart_button.loading::after {
+    -webkit-mask-image: none;
+    mask-image: none;
+}

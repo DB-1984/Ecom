@@ -1,0 +1,219 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "620px",
+      "wideSize": "1000px"
+    },
+    "spacing": {
+      "units": ["%", "px", "em", "rem", "vh", "vw"],
+      "spacingSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "12px"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "24px"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "40px"
+        },
+        {
+          "name": "Section",
+          "slug": "section",
+          "size": "80px"
+        },
+        {
+          "name": "Page gutter",
+          "slug": "page-gutter",
+          "size": "clamp(14px, 1.8vw, 32px)"
+        }
+      ]
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Paper",
+          "slug": "paper",
+          "color": "#c7c7c7"
+        },
+        {
+          "name": "Gray",
+          "slug": "gray",
+          "color": "#676767"
+        },
+        {
+          "name": "Bold Orange",
+          "slug": "bold-orange",
+          "color": "#ff5500"
+        },
+        {
+          "name": "Red",
+          "slug": "red",
+          "color": "#e7190b"
+        },
+        {
+          "name": "Ink",
+          "slug": "ink",
+          "color": "#cec8c5"
+        },
+        {
+          "name": "Image background",
+          "slug": "image-background",
+          "color": "#ded8d1"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+          "name": "System Font",
+          "slug": "system-font"
+        },
+        {
+          "name": "Space Grotesk",
+          "slug": "space-grotesk",
+          "fontFamily": "'Space Grotesk', sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Space Grotesk",
+              "fontWeight": "300 700",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/SpaceGrotesk-VariableFont_wght.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blanka",
+          "slug": "blanka",
+          "fontFamily": "Blanka, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Blanka",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/Blanka.woff2"]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Label",
+          "slug": "label",
+          "size": "12px"
+        },
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "14px"
+        },
+        {
+          "name": "Body",
+          "slug": "body",
+          "size": "16px"
+        },
+        {
+          "name": "Product title",
+          "slug": "product-title",
+          "size": "20px"
+        },
+        {
+          "name": "Navigation",
+          "slug": "navigation",
+          "size": "clamp(16px, 1.8vw, 24px)"
+        },
+        {
+          "name": "Statement",
+          "slug": "statement",
+          "size": "clamp(42px, 7vw, 110px)"
+        }
+      ]
+    },
+    "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--space-grotesk)"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontSize": "clamp(3rem, 6vw, 6rem)",
+          "fontWeight": "700",
+          "lineHeight": "1",
+          "letterSpacing": "-0.04em"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "clamp(2.25rem, 4vw, 4rem)",
+          "fontWeight": "700",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.03em"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "clamp(1.75rem, 2.5vw, 2.5rem)",
+          "fontWeight": "600",
+          "lineHeight": "1.15",
+          "letterSpacing": "-0.02em"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "clamp(1.375rem, 2vw, 1.75rem)",
+          "fontWeight": "600",
+          "lineHeight": "1.2"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontSize": "1.25rem",
+          "fontWeight": "600",
+          "lineHeight": "1.3"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": "1rem",
+          "fontWeight": "600",
+          "lineHeight": "1.4"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header"
+    },
+    {
+      "area": "footer",
+      "name": "footer"
+    },
+    {
+      "area": "header",
+      "name": "ecom-header",
+      "title": "Ecom Header"
+    },
+    {
+      "area": "footer",
+      "name": "ecom-footer",
+      "title": "Ecom Footer"
+    }
+  ]
+}
