@@ -1,0 +1,115 @@
+<!-- wp:group {"className":"ecom-page ecom-order-confirmation-page","layout":{"type":"default"}} -->
+<div class="wp-block-group ecom-page ecom-order-confirmation-page">
+    <!-- wp:template-part {"slug":"ecom-header","theme":"ecom"} /-->
+
+    <!-- wp:group {"tagName":"main","className":"ecom-order-confirmation-main","layout":{"type":"constrained"}} -->
+    <main class="wp-block-group ecom-order-confirmation-main">
+        <!-- wp:group {"className":"ecom-order-confirmation-hero","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group ecom-order-confirmation-hero">
+            <!-- wp:paragraph {"className":"ecom-order-confirmation-kicker"} -->
+            <p class="ecom-order-confirmation-kicker">PURCHASE COMPLETE</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:woocommerce/order-confirmation-status {"className":"ecom-order-confirmation-status"} /-->
+
+            <!-- wp:paragraph {"className":"ecom-order-confirmation-introduction"} -->
+            <p class="ecom-order-confirmation-introduction">
+                Your order has been received. A confirmation email containing your order details will be sent to you
+                shortly.
+            </p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:spacer {"height":"25px"} -->
+            <div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"ecom-order-confirmation-content","layout":{"type":"default"}} -->
+        <div class="wp-block-group ecom-order-confirmation-content">
+            <!-- wp:woocommerce/order-confirmation-summary {"className":"ecom-order-confirmation-summary"} /-->
+
+            <!-- wp:woocommerce/order-confirmation-totals-wrapper {"className":"ecom-order-confirmation-section ecom-order-confirmation-details"} -->
+            <!-- wp:heading {"className":"ecom-order-confirmation-section-title"} -->
+            <h2 class="wp-block-heading ecom-order-confirmation-section-title">
+                Order details
+            </h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:woocommerce/order-confirmation-totals {"lock":{"remove":true}} /-->
+            <!-- /wp:woocommerce/order-confirmation-totals-wrapper -->
+
+            <!-- wp:woocommerce/order-confirmation-downloads-wrapper {"className":"ecom-order-confirmation-section ecom-order-confirmation-downloads"} -->
+            <!-- wp:heading {"className":"ecom-order-confirmation-section-title"} -->
+            <h2 class="wp-block-heading ecom-order-confirmation-section-title">
+                Downloads
+            </h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:woocommerce/order-confirmation-downloads {"lock":{"remove":true}} /-->
+            <!-- /wp:woocommerce/order-confirmation-downloads-wrapper -->
+
+            <!-- wp:columns {"className":"wc-block-order-confirmation-address-wrapper ecom-order-confirmation-addresses"} -->
+            <div class="wp-block-columns wc-block-order-confirmation-address-wrapper ecom-order-confirmation-addresses">
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:woocommerce/order-confirmation-shipping-wrapper {"className":"ecom-order-confirmation-section ecom-order-confirmation-address"} -->
+                    <!-- wp:heading {"className":"ecom-order-confirmation-section-title"} -->
+                    <h2 class="wp-block-heading ecom-order-confirmation-section-title">
+                        Shipping address
+                    </h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:woocommerce/order-confirmation-shipping-address {"lock":{"remove":true}} /-->
+                    <!-- /wp:woocommerce/order-confirmation-shipping-wrapper -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:woocommerce/order-confirmation-billing-wrapper {"className":"ecom-order-confirmation-section ecom-order-confirmation-address"} -->
+                    <!-- wp:heading {"className":"ecom-order-confirmation-section-title"} -->
+                    <h2 class="wp-block-heading ecom-order-confirmation-section-title">
+                        Billing address
+                    </h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:woocommerce/order-confirmation-billing-address {"lock":{"remove":true}} /-->
+                    <!-- /wp:woocommerce/order-confirmation-billing-wrapper -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:woocommerce/order-confirmation-additional-fields-wrapper {"className":"ecom-order-confirmation-section ecom-order-confirmation-additional-fields"} -->
+            <!-- wp:heading {"className":"ecom-order-confirmation-section-title"} -->
+            <h2 class="wp-block-heading ecom-order-confirmation-section-title">
+                Additional details
+            </h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:woocommerce/order-confirmation-additional-fields {"lock":{"remove":true}} /-->
+            <!-- /wp:woocommerce/order-confirmation-additional-fields-wrapper -->
+
+            <!-- wp:woocommerce/order-confirmation-additional-information {"className":"ecom-order-confirmation-additional-information"} /-->
+
+            <!-- wp:group {"className":"ecom-order-confirmation-actions","layout":{"type":"flex","flexWrap":"wrap"}} -->
+            <div class="wp-block-group ecom-order-confirmation-actions"><!-- wp:buttons -->
+                <div class="wp-block-buttons"><!-- wp:button {"className":"ecom-order-confirmation-shop-button"} -->
+                    <div class="wp-block-button ecom-order-confirmation-shop-button"><a
+                            class="wp-block-button__link wp-element-button" href="/shop/">
+                            Continue shopping
+                        </a></div>
+                    <!-- /wp:button -->
+                </div>
+                <!-- /wp:buttons -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+    </main>
+    <!-- /wp:group -->
+
+    <!-- wp:template-part {"slug":"ecom-footer","theme":"ecom"} /-->
+</div>
+<!-- /wp:group -->

@@ -31,48 +31,6 @@
     outline-offset: 5px;
 }
 
-.ecom-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 24px 0;
-    color: var(--wp--preset--color--bold-orange);
-}
-
-.ecom-footer .wp-block-site-title {
-    color: var(--wp--preset--color--bold-orange);
-}
-
-.ecom-header .wp-block-site-title {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.ecom-header .wp-block-site-title a {
-    text-decoration: none;
-}
-
-.ecom-header-actions {
-    display: flex;
-    align-items: center;
-    gap: clamp(20px, 4vw, 64px);
-}
-
-.ecom-header .wp-block-navigation {
-    font-size: clamp(16px, 1.8vw, 24px);
-}
-
-.ecom-header .wc-block-mini-cart__button {
-    color: var(--ecom-ink);
-}
-
-.ecom-header .wp-block-navigation__responsive-container.is-menu-open {
-    background: var(--ecom-paper);
-    color: var(--ecom-ink);
-}
-
 .ecom-wordmark {
     font-size: clamp(72px, 24.8vw, 500px);
     font-weight: 900;
@@ -895,6 +853,10 @@
     margin: 0;
 }
 
+:where(.wp-block-button__link) {
+    border-radius: 0px !important;
+}
+
 .ecom-shop-toolbar select {
     min-height: 48px;
     padding: 10px 44px 10px 14px;
@@ -1071,14 +1033,14 @@
 
 /* Sale badge */
 
-.ecom-shop-products .wc-block-components-product-sale-badge {
+.wc-block-components-product-sale-badge {
     top: 14px;
     right: 14px;
     min-width: auto;
     min-height: auto;
     padding: 9px 12px;
     color: #fff;
-    background: var(--shop-primary);
+    background: var(--wp--preset--color--bold-orange);
     border: 0;
     border-radius: 0;
     font-size: var(--wp--preset--font-size--label, 12px);
@@ -1206,5 +1168,766 @@
     .ecom-product-card__button .wp-element-button,
     .ecom-product-card__button .wc-block-components-product-button__button {
         width: 100%;
+    }
+}
+
+/* ==========================================================================
+   WooCommerce notices
+   ========================================================================== */
+
+.ecom-page .wc-block-components-notice-banner,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-error {
+    box-sizing: border-box;
+    margin-block: var(--wp--preset--spacing--medium, 24px);
+    padding: 18px 20px;
+
+    color: var(--wp--preset--color--bold-orange, #ff5500) !important;
+    background-color: var(--wp--preset--color--gray, #676767) !important;
+
+    border: 1px solid var(--wp--preset--color--bold-orange, #ff5500) !important;
+    border-left-width: 6px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Notice text */
+
+.ecom-page .wc-block-components-notice-banner p,
+.ecom-page .wc-block-components-notice-banner span,
+.ecom-page .wc-block-components-notice-banner strong,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-error {
+    color: inherit !important;
+}
+
+/* Links */
+
+.ecom-page .wc-block-components-notice-banner a,
+.woocommerce .woocommerce-message a,
+.woocommerce .woocommerce-info a,
+.woocommerce .woocommerce-error a {
+    color: inherit !important;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+}
+
+.ecom-page .wc-block-components-notice-banner a:hover,
+.woocommerce .woocommerce-message a:hover,
+.woocommerce .woocommerce-info a:hover,
+.woocommerce .woocommerce-error a:hover {
+    color: #fff !important;
+}
+
+/* WooCommerce Blocks notice icon */
+
+.ecom-page .wc-block-components-notice-banner>svg {
+    color: var(--wp--preset--color--gray, #676767) !important;
+    background-color: var(--wp--preset--color--bold-orange, #ff5500) !important;
+    fill: var(--wp--preset--color--gray, #676767) !important;
+    border-radius: 50%;
+}
+
+/* Buttons rendered inside notices */
+
+.ecom-page .wc-block-components-notice-banner .wc-block-components-button,
+.woocommerce .woocommerce-message .button,
+.woocommerce .woocommerce-info .button,
+.woocommerce .woocommerce-error .button {
+    color: var(--wp--preset--color--gray, #676767) !important;
+    background: var(--wp--preset--color--bold-orange, #ff5500) !important;
+    border: 2px solid var(--wp--preset--color--bold-orange, #ff5500) !important;
+    border-radius: 0 !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ecom-page .wc-block-components-notice-banner .wc-block-components-button:hover,
+.woocommerce .woocommerce-message .button:hover,
+.woocommerce .woocommerce-info .button:hover,
+.woocommerce .woocommerce-error .button:hover {
+    color: var(--wp--preset--color--bold-orange, #ff5500) !important;
+    background: #32373c !important;
+    border-color: var(--wp--preset--color--ink, #3d3d3d) !important;
+}
+
+/* Remove WooCommerce's variant-specific colour schemes */
+
+.ecom-page .wc-block-components-notice-banner.is-error,
+.ecom-page .wc-block-components-notice-banner.is-warning,
+.ecom-page .wc-block-components-notice-banner.is-success,
+.ecom-page .wc-block-components-notice-banner.is-info {
+    color: var(--wp--preset--color--bold-orange, #ff5500) !important;
+    background-color: #32373c !important;
+    border-color: var(--wp--preset--color--bold-orange, #ff5500) !important;
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward {
+    color: #fff !important
+}
+
+/* HEADER */
+.ecom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 24px 0;
+    color: var(--wp--preset--color--bold-orange);
+}
+
+.ecom-footer .wp-block-site-title {
+    color: var(--wp--preset--color--bold-orange);
+}
+
+.ecom-header .wp-block-site-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ecom-header .wp-block-site-title a {
+    text-decoration: none;
+}
+
+.ecom-header-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 4vw, 64px);
+}
+
+.ecom-header .wp-block-navigation {
+    font-size: clamp(16px, 1.8vw, 24px);
+}
+
+.ecom-header .wc-block-mini-cart__button {
+    color: var(--wp--preset--color--bold-orange) !important;
+}
+
+.ecom-header .wp-block-navigation__responsive-container.is-menu-open {
+    background: var(--ecom-paper);
+    color: var(--ecom-ink);
+}
+
+span.wc-block-mini-cart__badge {
+    color: #32373c
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.ecom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(16px, 3vw, 40px);
+    padding: 24px var(--wp--preset--spacing--page-gutter);
+    color: var(--wp--preset--color--bold-orange);
+}
+
+.wp-block-navigation__responsive-container.has-modal-open.is-menu-open {
+    background: var(--wp--preset--color--bold-orange) !important;
+}
+
+.is-menu-open .wp-block-search {
+    background: white !important;
+}
+
+.is-menu-open .wp-block-search__button {
+    background: #32373c !important;
+}
+
+.is-menu-open .wp-block-search__input {
+    color: #32373c !important;
+}
+
+.ecom-header .wp-block-site-title {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ecom-header .wp-block-site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ecom-footer .wp-block-site-title {
+    color: var(--wp--preset--color--bold-orange);
+}
+
+/* ==========================================================================
+   Header actions
+   ========================================================================== */
+
+.ecom-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 1 auto;
+    gap: clamp(16px, 3vw, 48px);
+    min-width: 0;
+    margin: 0;
+}
+
+.ecom-header .wp-block-navigation {
+    flex: 0 0 auto;
+    font-size: clamp(16px, 1.8vw, 24px);
+}
+
+.ecom-header .wp-block-navigation a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ecom-header .wp-block-navigation a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* Customer account */
+
+.ecom-header .wp-block-woocommerce-customer-account {
+    flex: 0 0 auto;
+    color: var(--wp--preset--color--bold-orange);
+}
+
+.ecom-header .wc-block-customer-account__account-icon {
+    color: currentColor;
+}
+
+/* Mini-cart */
+
+.ecom-header .wc-block-mini-cart {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.ecom-header .wc-block-mini-cart__button {
+    color: var(--wp--preset--color--ink);
+}
+
+/* ==========================================================================
+   Product search
+   ========================================================================== */
+
+.ecom-header-search {
+    flex: 0 1 300px;
+    width: clamp(180px, 20vw, 300px);
+    min-width: 160px;
+    margin: 0;
+}
+
+.ecom-header-search .wp-block-search__inside-wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding: 0;
+    border: 0;
+}
+
+.ecom-header-search .wp-block-search__input {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 8px 12px;
+    color: var(--wp--preset--color--bold-orange);
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid currentColor;
+    border-radius: 0;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.ecom-header-search .wp-block-search__input::placeholder {
+    color: currentColor;
+    opacity: 0.65;
+}
+
+.ecom-header-search .wp-block-search__input:focus {
+    outline: 0;
+    border-bottom-color: var(--wp--preset--color--ink);
+}
+
+.ecom-header-search .wp-block-search__input:focus-visible {
+    outline: 2px solid var(--wp--preset--color--bold-orange);
+    outline-offset: 3px;
+}
+
+input#wp-block-search__input-4::placeholder {
+    color: white;
+}
+
+.ecom-header-search .wp-block-search__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    box-sizing: border-box;
+    width: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    margin: 0;
+    padding: 10px;
+    color: var(--wp--preset--color--paper);
+    background: var(--wp--preset--color--bold-orange);
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.ecom-header-search .wp-block-search__button:hover {
+    color: var(--wp--preset--color--paper);
+    background: var(--wp--preset--color--ink);
+}
+
+.ecom-header-search .wp-block-search__button:focus-visible {
+    outline: 2px solid var(--wp--preset--color--ink);
+    outline-offset: 3px;
+}
+
+.ecom-header-search .wp-block-search__button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Desktop/mobile search visibility */
+
+.ecom-desktop-search {
+    display: block;
+}
+
+.ecom-mobile-search {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Navigation overlay
+   ========================================================================== */
+
+.ecom-header .wp-block-navigation__responsive-container.is-menu-open {
+    color: var(--wp--preset--color--ink);
+    background: var(--wp--preset--color--paper);
+}
+
+.ecom-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+    box-sizing: border-box;
+    align-items: stretch;
+    width: 100%;
+    padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--page-gutter);
+}
+
+.ecom-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Tablet and mobile
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet: navigation and desktop search are still visible
+   ========================================================================== */
+
+@media (min-width: 601px) and (max-width: 781px) {
+    .ecom-header {
+        gap: 12px;
+        padding-block: 18px;
+    }
+
+    .ecom-header-actions {
+        gap: 12px;
+    }
+
+    .ecom-header .wp-block-site-title {
+        font-size: 20px;
+    }
+
+    .ecom-header .wp-block-navigation {
+        font-size: 16px;
+    }
+
+    .ecom-desktop-search {
+        display: block;
+        flex: 0 1 200px;
+        width: clamp(140px, 22vw, 200px);
+        min-width: 140px;
+    }
+
+    .ecom-header-search .wp-block-search__input {
+        font-size: 13px;
+    }
+}
+
+/* ==========================================================================
+   Mobile: WordPress switches the navigation to its overlay
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    .ecom-header {
+        flex-wrap: nowrap;
+        gap: 16px;
+        padding-block: 18px;
+    }
+
+    .ecom-header-actions {
+        display: contents;
+    }
+
+    /* Burger sits alone on the left. */
+
+    .ecom-header .ecom-header-actions>.wp-block-navigation {
+        order: 1;
+        flex: 0 0 auto;
+        margin-right: auto;
+    }
+
+    /* Everything else remains grouped on the right. */
+
+    .ecom-header>.wp-block-site-title {
+        order: 2;
+        flex: 0 1 auto;
+        margin: 0;
+    }
+
+    .ecom-header .wp-block-woocommerce-customer-account {
+        order: 3;
+        flex: 0 0 auto;
+    }
+
+    .ecom-header .wc-block-mini-cart {
+        order: 4;
+        flex: 0 0 auto;
+    }
+
+    .ecom-desktop-search {
+        display: none !important;
+    }
+
+    .ecom-header .wp-block-site-title {
+        min-width: 0;
+        white-space: normal;
+    }
+
+    .ecom-header-actions {
+        flex: 0 0 auto;
+        gap: clamp(14px, 4vw, 24px);
+    }
+
+    .ecom-desktop-search {
+        display: none !important;
+    }
+
+    .ecom-header .wp-block-navigation__responsive-container.is-menu-open .ecom-mobile-search {
+        display: block !important;
+        flex: none;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin-top: var(--wp--preset--spacing--large);
+    }
+
+    .ecom-header .wp-block-navigation__responsive-container.is-menu-open .ecom-mobile-search .wp-block-search__inside-wrapper {
+        width: 100%;
+    }
+
+    .ecom-header .wp-block-navigation__responsive-container.is-menu-open .ecom-mobile-search .wp-block-search__input {
+        min-height: 54px;
+        padding-inline: 16px;
+        font-size: 16px;
+    }
+
+    .ecom-header .wp-block-navigation__responsive-container.is-menu-open .ecom-mobile-search .wp-block-search__button {
+        flex-basis: 54px;
+        width: 54px;
+        min-width: 54px;
+        min-height: 54px;
+    }
+}
+
+/* ==========================================================================
+   Narrow phones
+   ========================================================================== */
+
+@media (max-width: 480px) {
+    .ecom-header {
+        gap: 12px;
+    }
+
+    .ecom-header .wp-block-site-title {
+        max-width: calc(100vw - 190px);
+        font-size: 20px;
+    }
+
+    .ecom-header-actions {
+        gap: 12px;
+    }
+
+    .ecom-header .wp-block-navigation {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   Product search results
+   ========================================================================== */
+
+.ecom-search-page {
+    min-height: 100vh;
+    color: var(--wp--preset--color--ink);
+    background: var(--wp--preset--color--gray);
+}
+
+.ecom-search-product-button .wp-block-button__link,
+.ecom-search-product-button button {
+    color: #32373c !important;
+}
+
+.ecom-search-main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    padding: clamp(48px, 8vw, 120px) var(--wp--preset--spacing--page-gutter);
+}
+
+.ecom-search-introduction {
+    width: 100%;
+    max-width: none;
+    padding-bottom: clamp(32px, 5vw, 64px);
+    border-bottom: 4px solid var(--wp--preset--color--bold-orange);
+}
+
+.ecom-search-kicker {
+    margin: 0 0 16px;
+    color: var(--wp--preset--color--bold-orange);
+    font-size: var(--wp--preset--font-size--label);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ecom-search-title {
+    max-width: 14ch;
+    margin: 0 0 32px;
+    color: var(--wp--preset--color--bold-orange);
+    font-size: clamp(42px, 7vw, 110px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    overflow-wrap: anywhere;
+}
+
+/* Search form */
+
+.ecom-search-form {
+    width: min(100%, 640px);
+    margin: 0;
+}
+
+.ecom-search-form .wp-block-search__inside-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    border: 0;
+}
+
+.ecom-search-form .wp-block-search__input {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 54px;
+    padding: 12px 16px;
+    color: var(--wp--preset--color--ink);
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 0;
+    font: inherit;
+    font-size: 16px;
+}
+
+.ecom-search-form .wp-block-search__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 54px;
+    width: 54px;
+    min-height: 54px;
+    margin: 0;
+    padding: 14px;
+    color: var(--wp--preset--color--paper);
+    background: var(--wp--preset--color--bold-orange);
+    border: 0;
+    border-radius: 0;
+}
+
+.ecom-search-form .wp-block-search__button:hover {
+    background: var(--wp--preset--color--ink);
+}
+
+/* Results */
+
+.ecom-search-results {
+    width: 100%;
+    max-width: none;
+    margin-top: clamp(40px, 6vw, 80px);
+}
+
+.ecom-search-grid {
+    gap: clamp(32px, 4vw, 64px) clamp(20px, 3vw, 40px);
+}
+
+.ecom-search-product {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+}
+
+.ecom-search-product .wp-block-woocommerce-product-image {
+    margin-bottom: 20px;
+    background: var(--wp--preset--color--image-background);
+    overflow: hidden;
+}
+
+.ecom-search-product .wp-block-woocommerce-product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 200ms ease;
+}
+
+.ecom-search-product:hover .wp-block-woocommerce-product-image img {
+    transform: scale(1.025);
+}
+
+.ecom-search-product-category {
+    margin: 0 0 8px;
+    color: var(--wp--preset--color--gray);
+    font-size: var(--wp--preset--font-size--label);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ecom-search-product-category a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ecom-search-product-title {
+    margin: 0 0 12px;
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.ecom-search-product-title a {
+    color: var(--wp--preset--color--ink);
+    text-decoration: none;
+}
+
+.ecom-search-product-title a:hover {
+    color: var(--wp--preset--color--bold-orange);
+}
+
+.ecom-search-product-price {
+    margin: 0 0 20px;
+    color: var(--wp--preset--color--bold-orange);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ecom-search-product-button {
+    margin-top: auto;
+}
+
+.ecom-search-product-button .wp-block-button__link,
+.ecom-search-product-button button {
+    color: var(--wp--preset--color--paper);
+    background: var(--wp--preset--color--ink);
+    border: 0;
+    border-radius: 0;
+}
+
+.ecom-search-product-button .wp-block-button__link:hover,
+.ecom-search-product-button button:hover {
+    background: var(--wp--preset--color--bold-orange);
+}
+
+/* Pagination */
+
+.ecom-search-pagination {
+    margin-top: clamp(48px, 7vw, 96px);
+    padding-top: 24px;
+    border-top: 2px solid var(--wp--preset--color--ink);
+}
+
+.ecom-search-pagination a {
+    color: var(--wp--preset--color--ink);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ecom-search-pagination a:hover,
+.ecom-search-pagination .current {
+    color: var(--wp--preset--color--bold-orange);
+}
+
+/* No results */
+
+.ecom-search-no-results {
+    width: 100%;
+    max-width: none;
+    padding-block: clamp(48px, 8vw, 100px);
+}
+
+.ecom-search-no-results h2 {
+    margin-top: 0;
+    color: var(--wp--preset--color--bold-orange);
+}
+
+/* Responsive grid */
+
+@media (max-width: 900px) {
+    .ecom-search-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .ecom-search-main {
+        padding-top: 40px;
+    }
+
+    .ecom-search-title {
+        font-size: clamp(42px, 14vw, 68px);
+    }
+
+    .ecom-search-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ecom-search-form .wp-block-search__input {
+        font-size: 16px;
     }
 }

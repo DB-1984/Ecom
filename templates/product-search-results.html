@@ -1,0 +1,95 @@
+<!-- wp:group {"className":"ecom-page ecom-search-page","layout":{"type":"default"}} -->
+<div class="wp-block-group ecom-page ecom-search-page">
+
+    <!-- wp:template-part {"slug":"ecom-header","theme":"ecom"} /-->
+
+    <!-- wp:group {"tagName":"main","className":"ecom-search-main","layout":{"type":"constrained"}} -->
+    <main class="wp-block-group ecom-search-main">
+
+        <!-- wp:group {"className":"ecom-search-introduction","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group ecom-search-introduction">
+
+            <!-- wp:paragraph {"className":"ecom-search-kicker"} -->
+            <p class="ecom-search-kicker">PRODUCT SEARCH</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:query-title {"type":"search","showSearchTerm":true,"className":"ecom-search-title"} /-->
+
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"className":"ecom-search-results","layout":{"type":"default"}} -->
+        <div class="wp-block-query ecom-search-results">
+
+            <!-- wp:post-template {"className":"ecom-search-grid","layout":{"type":"grid","columnCount":3}} -->
+
+            <!-- wp:group {"className":"ecom-search-product","layout":{"type":"default"}} -->
+            <div class="wp-block-group ecom-search-product">
+
+                <!-- wp:woocommerce/product-image {"showSaleBadge":true,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} -->
+                <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right"} /-->
+                <!-- /wp:woocommerce/product-image -->
+
+                <!-- wp:post-terms {"term":"product_cat","className":"ecom-search-product-category"} /-->
+
+                <!-- wp:post-title {"level":2,"isLink":true,"className":"ecom-search-product-title","__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
+
+                <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"className":"ecom-search-product-price"} /-->
+
+                <!-- wp:woocommerce/product-button {"textAlign":"left","isDescendentOfQueryLoop":true,"className":"ecom-search-product-button"} /-->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- /wp:post-template -->
+
+            <!-- wp:query-pagination {"className":"ecom-search-pagination","layout":{"type":"flex","justifyContent":"space-between"}} -->
+
+            <!-- wp:query-pagination-previous {"label":"← Previous"} /-->
+
+            <!-- wp:query-pagination-numbers /-->
+
+            <!-- wp:query-pagination-next {"label":"Next →"} /-->
+
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:query-no-results -->
+            <!-- wp:group {"className":"ecom-search-no-results","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group ecom-search-no-results">
+
+                <!-- wp:heading {"level":2} -->
+                <h2 class="wp-block-heading">Nothing found.</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph -->
+                <p>We couldn’t find a product matching your search. Try another term or return to the shop.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:buttons -->
+                <div class="wp-block-buttons">
+
+                    <!-- wp:button -->
+                    <div class="wp-block-button">
+                        <a class="wp-block-button__link wp-element-button" href="/shop/">
+                            View all products
+                        </a>
+                    </div>
+                    <!-- /wp:button -->
+
+                </div>
+                <!-- /wp:buttons -->
+
+            </div>
+            <!-- /wp:group -->
+            <!-- /wp:query-no-results -->
+
+        </div>
+        <!-- /wp:query -->
+
+    </main>
+    <!-- /wp:group -->
+
+    <!-- wp:template-part {"slug":"ecom-footer","theme":"ecom"} /-->
+
+</div>
+<!-- /wp:group -->
