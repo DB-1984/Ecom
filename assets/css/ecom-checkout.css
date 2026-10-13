@@ -1,0 +1,733 @@
+/* ==========================================================================
+   WooCommerce Checkout
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Checkout page and colour system
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main {
+    --checkout-primary:
+        var(--wp--preset--color--bold-orange, #ff5500);
+
+    --checkout-ink:
+        var(--wp--preset--color--gray, #3d3d3d);
+
+    --checkout-paper:
+        var(--wp--preset--color--paper, #c7c7c7);
+
+    --checkout-field:
+        var(--wp--preset--color--image-background, #e5e5e5);
+
+    width: 100%;
+    min-height: 80vh;
+
+    padding:
+        var(--wp--preset--spacing--section, 80px) var(--wp--preset--spacing--page-gutter,
+            clamp(14px, 1.8vw, 32px));
+
+    color: var(--checkout-primary);
+    background: var(--checkout-paper);
+}
+
+
+/* --------------------------------------------------------------------------
+   Checkout introduction
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-introduction {
+    margin-bottom:
+        var(--wp--preset--spacing--large, 40px);
+
+    padding-bottom:
+        var(--wp--preset--spacing--large, 40px);
+
+}
+
+.ecom-checkout-kicker {
+    margin: 0 0 14px;
+
+    color: var(--checkout-primary);
+
+    font-size:
+        var(--wp--preset--font-size--label, 12px);
+
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+}
+
+.ecom-checkout-title {
+    max-width: 10ch;
+    margin: 0 0 18px;
+
+    color: var(--checkout-primary);
+
+    font-size: clamp(3.5rem, 8vw, 8rem);
+    font-weight: 700;
+    line-height: 0.88;
+    letter-spacing: -0.06em;
+}
+
+.ecom-checkout-description {
+    max-width: 55ch;
+    margin: 0;
+
+    color: var(--checkout-ink);
+
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.5;
+}
+
+
+/* --------------------------------------------------------------------------
+   Checkout block
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wp-block-woocommerce-checkout {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: var(--checkout-primary);
+
+    container-type: inline-size;
+}
+
+.ecom-checkout-main .wc-block-checkout {
+    align-items: flex-start;
+    gap: clamp(32px, 5vw, 80px);
+}
+
+.ecom-checkout-main .wc-block-checkout__main {
+    min-width: 0;
+    padding-right: 0;
+}
+
+.ecom-checkout-main .wc-block-checkout__sidebar {
+    min-width: 0;
+    padding-left: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Checkout sections
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-checkout-step {
+    margin:
+        0 0 var(--wp--preset--spacing--large, 40px);
+
+    padding:
+        0 0 var(--wp--preset--spacing--large, 40px);
+
+    border-bottom: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-checkout-step__heading {
+    margin-bottom:
+        var(--wp--preset--spacing--medium, 24px);
+}
+
+.ecom-checkout-main .wc-block-components-checkout-step__title {
+    margin: 0;
+
+    color: var(--checkout-primary);
+
+    font-family: inherit;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.ecom-checkout-main .wc-block-components-checkout-step__description {
+    margin-top: 10px;
+
+    color: var(--checkout-ink);
+
+    font-size:
+        var(--wp--preset--font-size--small, 14px);
+
+    line-height: 1.5;
+}
+
+.ecom-checkout-main .wc-block-components-checkout-step__container {
+    padding-left: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Labels
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main label,
+.ecom-checkout-main .wc-block-components-text-input label,
+.ecom-checkout-main .wc-block-components-combobox-control label {
+    color: var(--checkout-primary);
+
+    font-family: inherit;
+    font-size:
+        var(--wp--preset--font-size--label, 12px);
+
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/* --------------------------------------------------------------------------
+   Text inputs
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-text-input input,
+.ecom-checkout-main .wc-block-components-form .wc-block-components-text-input input,
+.ecom-checkout-main .wc-block-components-combobox-control .components-combobox-control__input {
+    min-height: 58px;
+    padding: 20px 16px 8px;
+
+    color: var(--checkout-ink);
+    background: var(--checkout-field);
+
+    border: 1px solid var(--checkout-primary);
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size:
+        var(--wp--preset--font-size--body, 16px);
+
+    line-height: 1.25;
+}
+
+.ecom-checkout-main .wc-block-components-text-input input:hover,
+.ecom-checkout-main .wc-block-components-combobox-control .components-combobox-control__input:hover {
+    border-color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-text-input input:focus,
+.ecom-checkout-main .wc-block-components-combobox-control .components-combobox-control__input:focus {
+    outline: 3px solid var(--checkout-primary);
+    outline-offset: 2px;
+
+    border-color: var(--checkout-ink);
+    box-shadow: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Select controls
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-address-form select {
+    min-height: 58px;
+    padding: 14px 48px 14px 16px;
+
+    color: var(--checkout-ink);
+    background-color: var(--checkout-field);
+
+    border: 1px solid var(--checkout-primary);
+    border-radius: 0;
+    box-shadow: none;
+
+    font: inherit;
+    font-size:
+        var(--wp--preset--font-size--body, 16px);
+}
+
+.ecom-checkout-main .wc-block-components-address-form select:hover {
+    border-color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-address-form select:focus {
+    outline: 3px solid var(--checkout-primary);
+    outline-offset: 2px;
+
+    border-color: var(--checkout-ink);
+    box-shadow: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Browser autofill
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main input:-webkit-autofill,
+.ecom-checkout-main input:-webkit-autofill:hover,
+.ecom-checkout-main input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--checkout-ink);
+
+    -webkit-box-shadow:
+        0 0 0 1000px var(--checkout-field) inset;
+
+    border-color: var(--checkout-primary);
+}
+
+
+/* --------------------------------------------------------------------------
+   Validation
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-validation-error {
+    margin-top: 7px;
+
+    color: var(--checkout-primary);
+
+    font-size:
+        var(--wp--preset--font-size--small, 14px);
+
+    font-weight: 700;
+}
+
+.ecom-checkout-main .has-error input,
+.ecom-checkout-main input.has-error {
+    border-color: var(--checkout-primary);
+    border-width: 2px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Checkboxes
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-checkbox {
+    align-items: flex-start;
+}
+
+.ecom-checkout-main .wc-block-components-checkbox__input {
+    width: 22px;
+    height: 22px;
+
+    accent-color: var(--checkout-primary);
+
+    border: 1px solid var(--checkout-primary);
+    border-radius: 0;
+}
+
+.ecom-checkout-main .wc-block-components-checkbox__label {
+    color: var(--checkout-ink);
+
+    font-size:
+        var(--wp--preset--font-size--small, 14px);
+
+    line-height: 1.4;
+}
+
+
+/* --------------------------------------------------------------------------
+   Shipping and payment options
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-radio-control {
+    overflow: hidden;
+
+    border: 1px solid var(--checkout-primary);
+    border-radius: 0;
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__option {
+    padding: 20px;
+
+    color: var(--checkout-ink);
+    background: transparent;
+
+    border-bottom: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__option:last-child {
+    border-bottom: 0;
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__option:hover {
+    background: rgb(255 85 0 / 10%);
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__option-checked {
+    color: var(--checkout-ink);
+    background: var(--checkout-field);
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__input {
+    accent-color: var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__label {
+    color: inherit;
+
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.ecom-checkout-main .wc-block-components-radio-control__description {
+    color: var(--checkout-ink);
+
+    font-size:
+        var(--wp--preset--font-size--small, 14px);
+}
+
+
+/* Payment method details */
+
+.ecom-checkout-main .wc-block-components-radio-control-accordion-content {
+    padding: 20px;
+
+    color: var(--checkout-ink);
+    background: rgb(255 85 0 / 8%);
+
+    border-top: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-radio-control-accordion-content p {
+    color: inherit;
+    line-height: 1.55;
+}
+
+
+/* --------------------------------------------------------------------------
+   Order summary
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wp-block-woocommerce-checkout-order-summary-block {
+    overflow: hidden;
+
+    color: var(--checkout-primary);
+    background: var(--checkout-field);
+
+    border: 2px solid var(--checkout-primary);
+    border-radius: 0;
+    padding: 2em;
+}
+
+.wp-block-woocommerce-checkout p {
+    color: var(--wp--preset--color--gray) !important;
+}
+
+.ecom-checkout-main .wc-block-components-checkout-order-summary__title {
+    padding: 22px 24px;
+
+    color: var(--checkout-primary);
+    background: transparent;
+
+    border-bottom: 2px solid var(--checkout-primary);
+
+    font-family: inherit;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.ecom-checkout-main .wc-block-components-checkout-order-summary__content {
+    padding: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Order summary products
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-order-summary-item {
+    padding: 20px 24px;
+
+    border-bottom: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-order-summary-item__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    background: var(--checkout-paper);
+    border: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-order-summary-item__description {
+    color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-product-name {
+    color: var(--checkout-primary);
+
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.ecom-checkout-main .wc-block-components-product-name:hover {
+    color: var(--checkout-ink);
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
+
+.ecom-checkout-main .wc-block-components-product-metadata {
+    color: var(--checkout-ink);
+
+    font-size:
+        var(--wp--preset--font-size--label, 12px);
+
+    line-height: 1.4;
+}
+
+.ecom-checkout-main .wc-block-components-product-price {
+    color: var(--checkout-ink);
+    font-weight: 700;
+}
+
+.ecom-checkout-main .wc-block-components-order-summary-item__quantity {
+    color: #fff;
+    background: var(--checkout-primary);
+    border: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Totals
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-totals-wrapper {
+    padding: 18px 24px;
+
+    border-top: 0;
+    border-bottom: 1px solid var(--checkout-primary);
+}
+
+.ecom-checkout-main .wc-block-components-totals-item {
+    color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-totals-item__label,
+.ecom-checkout-main .wc-block-components-totals-item__value {
+    color: inherit;
+}
+
+.ecom-checkout-main .wc-block-components-totals-footer-item {
+    color: var(--checkout-primary);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* --------------------------------------------------------------------------
+   Coupon panel
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-panel {
+    border-radius: 0;
+}
+
+.ecom-checkout-main .wc-block-components-panel__button {
+    color: var(--checkout-primary);
+
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.ecom-checkout-main .wc-block-components-panel__button:hover {
+    color: var(--checkout-ink);
+}
+
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-button {
+    min-height: 52px;
+    padding: 14px 22px;
+
+    color: var(--checkout-primary);
+    background: transparent;
+
+    border: 2px solid var(--checkout-primary);
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.ecom-checkout-main .wc-block-components-button:hover {
+    color: #fff;
+    background: var(--checkout-ink);
+    border-color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-button:focus-visible {
+    outline: 3px solid var(--checkout-primary);
+    outline-offset: 3px;
+}
+
+
+/* Place-order button */
+
+.ecom-checkout-main .wc-block-components-checkout-place-order-button {
+    width: 100%;
+    min-height: 64px;
+
+    color: #fff;
+    background: var(--checkout-primary);
+    border-color: var(--checkout-primary);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.ecom-checkout-main .wc-block-components-checkout-place-order-button:hover {
+    color: #fff;
+    background: var(--checkout-ink);
+    border-color: var(--checkout-ink);
+}
+
+.ecom-checkout-main .wc-block-components-checkout-place-order-button:disabled {
+    color: rgb(255 255 255 / 70%);
+    background: var(--checkout-ink);
+    border-color: var(--checkout-ink);
+
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+
+/* --------------------------------------------------------------------------
+   Terms and privacy
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-checkout__terms,
+.ecom-checkout-main .wc-block-checkout__privacy-policy {
+    color: var(--checkout-ink);
+
+    font-size:
+        var(--wp--preset--font-size--small, 14px);
+
+    line-height: 1.5;
+}
+
+.ecom-checkout-main .wc-block-checkout__terms a,
+.ecom-checkout-main .wc-block-checkout__privacy-policy a {
+    color: var(--checkout-primary);
+
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+}
+
+.ecom-checkout-main .wc-block-checkout__terms a:hover,
+.ecom-checkout-main .wc-block-checkout__privacy-policy a:hover {
+    color: var(--checkout-ink);
+}
+
+
+/* --------------------------------------------------------------------------
+   Notices
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-notice-banner {
+    margin-bottom:
+        var(--wp--preset--spacing--medium, 24px);
+
+    padding: 16px 18px;
+
+    color: var(--checkout-ink);
+    background: var(--checkout-field);
+
+    border: 1px solid var(--checkout-primary);
+    border-left-width: 6px;
+    border-radius: 0;
+}
+
+.ecom-checkout-main .wc-block-components-notice-banner.is-error,
+.ecom-checkout-main .wc-block-components-notice-banner.is-warning,
+.ecom-checkout-main .wc-block-components-notice-banner.is-success {
+    border-color: var(--checkout-primary);
+}
+
+
+/* --------------------------------------------------------------------------
+   Loading
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main .wc-block-components-spinner {
+    color: var(--checkout-primary);
+}
+
+
+/* --------------------------------------------------------------------------
+   Hidden dynamic elements
+   -------------------------------------------------------------------------- */
+
+.ecom-checkout-main [hidden] {
+    display: none !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@container (max-width: 700px) {
+    .ecom-checkout-main .wc-block-checkout {
+        display: block;
+    }
+
+    .ecom-checkout-main .wc-block-checkout__sidebar {
+        margin-top:
+            var(--wp--preset--spacing--large, 40px);
+    }
+}
+
+@media (max-width: 781px) {
+    .ecom-checkout-main {
+        padding-top:
+            var(--wp--preset--spacing--large, 40px);
+
+        padding-bottom:
+            var(--wp--preset--spacing--section, 80px);
+    }
+
+    .ecom-checkout-main .wc-block-checkout {
+        display: block;
+    }
+
+    .ecom-checkout-main .wc-block-checkout__main,
+    .ecom-checkout-main .wc-block-checkout__sidebar {
+        width: 100%;
+    }
+
+    .ecom-checkout-main .wc-block-checkout__sidebar {
+        margin-top:
+            var(--wp--preset--spacing--large, 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .ecom-checkout-main {
+        padding-inline:
+            var(--wp--preset--spacing--page-gutter,
+                14px);
+    }
+
+    .ecom-checkout-title {
+        font-size: clamp(3.25rem, 16vw, 5rem);
+    }
+
+    .ecom-checkout-main .wc-block-components-checkout-step {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+    }
+
+    .ecom-checkout-main .wc-block-components-order-summary-item,
+    .ecom-checkout-main .wc-block-components-totals-wrapper {
+        padding-inline: 16px;
+    }
+
+    .ecom-checkout-main .wc-block-components-radio-control__option {
+        padding: 16px;
+    }
+}
