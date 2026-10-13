@@ -53,6 +53,10 @@ button.wc-block-components-drawer__close > svg {
     display: none !important;
 }
 
+.wp-block-woocommerce-empty-mini-cart-contents-block .wc-block-mini-cart__empty-cart-wrapper{
+    padding: 16px!important;
+}
+
 .wp-block-navigation__responsive-container.is-menu-open .ecom-header-search .wp-block-search__input{
     background: var(--wp--preset--color--bold-orange)!important;
     color: var(--wp--preset--color--ink)!important;
