@@ -48,6 +48,11 @@ button.wc-block-components-drawer__close > svg {
     color: var(--wp--preset--color--ink)!important;
 }
 
+.wc-block-cart-item__image img[hidden],
+.wc-block-cart-item__image a[hidden] {
+    display: none !important;
+}
+
 .wp-block-navigation__responsive-container.is-menu-open .ecom-header-search .wp-block-search__input{
     background: var(--wp--preset--color--bold-orange)!important;
     color: var(--wp--preset--color--ink)!important;
