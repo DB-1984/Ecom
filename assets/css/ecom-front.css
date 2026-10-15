@@ -62,7 +62,7 @@
 }
 
 .ecom-page p:not(.wp-block-site-title, .contact-form-block p) {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.35;
     color: var(--wp--preset--color--ink);
 }
@@ -102,6 +102,7 @@
     min-width: 0;
     background-color: var(--wp--preset--color--image-background);
     padding: 1em;
+    text-align: center;
 }
 
 .ecom-products .wc-block-product:hover {
