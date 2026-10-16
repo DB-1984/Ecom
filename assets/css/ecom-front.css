@@ -673,8 +673,6 @@
     place-items: center;
 
     min-height: 100%;
-    padding:
-        var(--wp--preset--spacing--section, 80px) var(--wp--preset--spacing--medium, 24px);
 
     color: var(--mini-cart-foreground);
     background: var(--mini-cart-background);
