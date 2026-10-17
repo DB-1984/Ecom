@@ -10,8 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A block e-commerce theme for demonstration.
+It uses custom block templates composed from native WordPress and WooCommerce blocks to shape the storefront, product, search, cart and checkout experiences. A bold, high-contrast visual system combines vivid orange accents, neutral surfaces and typography-led layouts throughout the site.
 
+The project also includes a custom contact-form block developed with the WordPress Block API and compiled using `@wordpress/scripts`. Its editor component provides an appropriate back-end preview, while PHP renders the accessible front-end form and a dedicated `view.js` submits data asynchronously to a custom WordPress REST API endpoint.
 
 == Changelog ==
 
