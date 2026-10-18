@@ -1430,6 +1430,10 @@ span.wc-block-mini-cart__badge {
     color: currentColor;
 }
 
+.woocommerce form .form-row .required{
+   color: white!important
+}
+
 /* Mini-cart */
 
 .ecom-header .wc-block-mini-cart {
